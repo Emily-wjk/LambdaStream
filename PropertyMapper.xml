@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rit.demo.dao.PropertyMapper" >
+  <resultMap id="BaseResultMap" type="com.rit.demo.pojo.Property" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="distance" property="distance" jdbcType="INTEGER" />
+    <result column="sales" property="sales" jdbcType="INTEGER" />
+    <result column="priceLevel" property="priceLevel" jdbcType="INTEGER" />
+  </resultMap>
+  
+
+  <!--查询所有数据-->
+  <select id="queryAll"  resultMap="BaseResultMap">
+    SELECT id,name,distance,sales,priceLevel from property 
+  </select>
+  
+</mapper>
