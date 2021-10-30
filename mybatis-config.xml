@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- 全局映射器启用缓存(二级缓存) -->
+        <setting name="cacheEnabled" value="true" />
+        <!--获取该主键对应的对象的属性值-->
+        <setting name="useGeneratedKeys" value="true" />
+        <!--可通过insert、update、delete方法的返回值判断sql是否执行成功，返回非0表示执行sql成功的条数，返回0表示sql执行失败-->
+        <setting name="defaultExecutorType" value="REUSE" />
+        <!-- 打印查询语句 -->
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+   </settings>
+</configuration>
